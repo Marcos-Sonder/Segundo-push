@@ -1,0 +1,545 @@
+/*========================================
+    ESTILOS GENERALES
+========================================*/
+
+body{
+    background: linear-gradient(
+        135deg,
+        #0f0f0f 0%,
+        #1a1a1a 20%,
+        #ff6f00 45%,
+        #ff9800 70%,
+        #ffc107 100%
+    );
+
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/*========================================
+    EFECTOS DE FONDO
+========================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    radial-gradient(
+        circle at top left,
+        rgba(255,193,7,.18),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        rgba(255,111,0,.18),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,.05),
+        transparent 50%
+    );
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+/*========================================
+    NAVBAR
+========================================*/
+
+.navbar{
+
+    background:rgba(15,15,15,.88);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:2px solid #ff9800;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.35);
+}
+
+.navbar-brand{
+
+    color:#ffc107 !important;
+
+    font-weight:bold;
+
+    font-size:1.6rem;
+
+    letter-spacing:1px;
+}
+
+.nav-link{
+
+    color:#ffffff !important;
+
+    transition:.35s;
+}
+
+.nav-link:hover{
+
+    color:#ff9800 !important;
+
+    text-shadow:
+        0 0 8px #ff9800;
+}
+
+/*========================================
+    HERO
+========================================*/
+
+.hero{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero h1{
+
+    font-size:4.5rem;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    text-shadow:
+
+        0 0 20px rgba(255,152,0,.55),
+
+        0 0 35px rgba(0,0,0,.55);
+}
+
+.hero .lead{
+
+    font-size:1.3rem;
+
+    color:#ffe082;
+}
+
+.form-control{
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    background:white;
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,.25);
+}
+
+.form-control:focus{
+
+    box-shadow:
+
+        0 0 18px #ff9800;
+
+    border:none;
+}
+/*========================================
+    TITULOS
+========================================*/
+
+.titulo-seccion{
+
+    color:#ffffff;
+
+    text-align:center;
+
+    font-weight:900;
+
+    font-size:2.5rem;
+
+    margin-bottom:40px;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 0 12px rgba(255,193,7,.60),
+        0 0 25px rgba(255,152,0,.35);
+}
+
+/*========================================
+    TARJETAS
+========================================*/
+
+.tarjeta{
+
+    border:none;
+
+    border-radius:22px;
+
+    background:rgba(25,25,25,.92);
+
+    color:white;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35),
+        0 0 12px rgba(255,152,0,.20);
+
+    border:1px solid rgba(255,193,7,.15);
+}
+
+.tarjeta:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.02);
+
+    box-shadow:
+        0 22px 40px rgba(0,0,0,.45),
+        0 0 28px rgba(255,152,0,.55);
+}
+
+/*========================================
+    IMAGENES
+========================================*/
+
+.contenedor-imagen{
+
+    height:320px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #202020 25%,
+            #ff7a00 65%,
+            #ffc107 100%
+        );
+
+    position:relative;
+}
+
+.contenedor-imagen::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            130deg,
+            transparent 20%,
+            rgba(255,255,255,.08) 50%,
+            transparent 80%
+        );
+
+    opacity:.7;
+}
+
+.contenedor-imagen img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.tarjeta:hover img{
+
+    transform:scale(1.08);
+}
+
+/*========================================
+    CARD BODY
+========================================*/
+
+.card-body{
+
+    padding:25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.98),
+            rgba(18,18,18,.98)
+        );
+}
+
+.card-body h4,
+.card-body h5{
+
+    color:#ffc107;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+}
+
+.card-body p{
+
+    color:#f2f2f2;
+
+    line-height:1.6;
+}
+
+/*========================================
+    RANKING
+========================================*/
+
+.ranking{
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    color:#ff9800;
+
+    text-shadow:
+        0 0 10px rgba(255,152,0,.55);
+}
+
+/*========================================
+    BADGES
+========================================*/
+
+.badge{
+
+    font-size:.9rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9800,
+            #ffc107
+        ) !important;
+
+    color:#111 !important;
+
+    font-weight:bold;
+}
+/*========================================
+    FOOTER
+========================================*/
+
+footer{
+
+    margin-top:70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #1b1b1b,
+            #000000
+        );
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:3px solid #ff9800;
+
+    box-shadow:
+        0 -10px 25px rgba(0,0,0,.40);
+}
+
+footer h5{
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+
+    color:#ffc107;
+
+    text-shadow:
+        0 0 12px rgba(255,193,7,.50);
+}
+
+footer p{
+
+    color:#e8e8e8;
+}
+
+/*========================================
+    CARRUSEL
+========================================*/
+
+.carousel{
+
+    margin-top:20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+
+    background-color:rgba(255,152,0,.85);
+
+    border-radius:50%;
+
+    padding:18px;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+
+    width:6%;
+}
+
+.carousel-indicators [data-bs-target]{
+
+    background:#ffc107;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+}
+
+/*========================================
+    SCROLLBAR
+========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111111;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #ff9800,
+        #ffc107
+    );
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ffb300;
+}
+
+/*========================================
+    TABLET
+========================================*/
+
+@media (max-width:992px){
+
+    .hero h1{
+
+        font-size:3.5rem;
+    }
+
+    .contenedor-imagen{
+
+        height:280px;
+    }
+
+}
+
+/*========================================
+    CELULARES
+========================================*/
+
+@media (max-width:576px){
+
+    .hero{
+
+        padding:80px 15px;
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+    }
+
+    .hero .lead{
+
+        font-size:1rem;
+    }
+
+    .titulo-seccion{
+
+        font-size:1.8rem;
+    }
+
+    .contenedor-imagen{
+
+        height:220px;
+
+        font-size:1rem;
+    }
+
+    .card-body{
+
+        padding:15px;
+    }
+
+}
+
+/*========================================
+    ANIMACIONES
+========================================*/
+
+.tarjeta,
+.form-control,
+.badge,
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+
+    transition:all .35s ease;
+}
+
+html{
+
+    scroll-behavior:smooth;
+}
